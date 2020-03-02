@@ -41,6 +41,10 @@
 		AAF1CA301ACE6E46005F6295 /* QBAssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF1CA2E1ACE6E46005F6295 /* QBAssetsViewController.m */; };
 		AAF1CA331ACE6FB5005F6295 /* QBAssetCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF1CA311ACE6FB5005F6295 /* QBAssetCell.h */; };
 		AAF1CA341ACE6FB5005F6295 /* QBAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF1CA321ACE6FB5005F6295 /* QBAssetCell.m */; };
+		E1560AD1240D651A001D53F7 /* PushNoAnimationSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = E1560ACF240D651A001D53F7 /* PushNoAnimationSegue.h */; };
+		E1560AD2240D651A001D53F7 /* PushNoAnimationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = E1560AD0240D651A001D53F7 /* PushNoAnimationSegue.m */; };
+		E1560AD5240D65BF001D53F7 /* UIViewController+EnableAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = E1560AD3240D65BF001D53F7 /* UIViewController+EnableAnimation.h */; };
+		E1560AD6240D65BF001D53F7 /* UIViewController+EnableAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E1560AD4240D65BF001D53F7 /* UIViewController+EnableAnimation.m */; };
 		E521B0A21B01D9300079461F /* QBImagePicker.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAF1CA3F1ACE8918005F6295 /* QBImagePicker.strings */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +76,10 @@
 		AAF1CA321ACE6FB5005F6295 /* QBAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAssetCell.m; sourceTree = "<group>"; };
 		AAF1CA3E1ACE8918005F6295 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
 		AAF1CA401ACE8A8B005F6295 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
+		E1560ACF240D651A001D53F7 /* PushNoAnimationSegue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushNoAnimationSegue.h; sourceTree = "<group>"; };
+		E1560AD0240D651A001D53F7 /* PushNoAnimationSegue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushNoAnimationSegue.m; sourceTree = "<group>"; };
+		E1560AD3240D65BF001D53F7 /* UIViewController+EnableAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EnableAnimation.h"; sourceTree = "<group>"; };
+		E1560AD4240D65BF001D53F7 /* UIViewController+EnableAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EnableAnimation.m"; sourceTree = "<group>"; };
 		E521B0A11B01D6810079461F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/QBImagePicker.strings"; sourceTree = "<group>"; };
 		F167DB441C086AB90045AD5B /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +151,10 @@
 				AA3AD0761ACFA23300BF523E /* ViewControllers */,
 				AAF1CA241ACE5665005F6295 /* Resources */,
 				AAA8FE061ACDA079002A9710 /* Supporting Files */,
+				E1560ACF240D651A001D53F7 /* PushNoAnimationSegue.h */,
+				E1560AD0240D651A001D53F7 /* PushNoAnimationSegue.m */,
+				E1560AD3240D65BF001D53F7 /* UIViewController+EnableAnimation.h */,
+				E1560AD4240D65BF001D53F7 /* UIViewController+EnableAnimation.m */,
 			);
 			path = QBImagePicker;
 			sourceTree = "<group>";
@@ -173,10 +185,12 @@
 			files = (
 				790A850F1AE7D4D9008E2A80 /* QBSlomoIconView.h in Headers */,
 				AA3AD0731ACFA06700BF523E /* QBVideoIndicatorView.h in Headers */,
+				E1560AD1240D651A001D53F7 /* PushNoAnimationSegue.h in Headers */,
 				AAF1CA331ACE6FB5005F6295 /* QBAssetCell.h in Headers */,
 				AAF1CA2F1ACE6E46005F6295 /* QBAssetsViewController.h in Headers */,
 				AAF1CA1A1ACE5467005F6295 /* QBAlbumCell.h in Headers */,
 				AAA8FE5B1ACDA554002A9710 /* QBAlbumsViewController.h in Headers */,
+				E1560AD5240D65BF001D53F7 /* UIViewController+EnableAnimation.h in Headers */,
 				AA3AD06F1ACF9A3A00BF523E /* QBVideoIconView.h in Headers */,
 				AAA8FE091ACDA079002A9710 /* QBImagePicker.h in Headers */,
 				AABBF0901ACEDDFF003188A3 /* QBCheckmarkView.h in Headers */,
@@ -227,6 +241,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				ja,
@@ -283,8 +298,10 @@
 				AAF1CA341ACE6FB5005F6295 /* QBAssetCell.m in Sources */,
 				AA3AD0701ACF9A3A00BF523E /* QBVideoIconView.m in Sources */,
 				790A85101AE7D4D9008E2A80 /* QBSlomoIconView.m in Sources */,
+				E1560AD6240D65BF001D53F7 /* UIViewController+EnableAnimation.m in Sources */,
 				AABBF0911ACEDDFF003188A3 /* QBCheckmarkView.m in Sources */,
 				AAF1CA301ACE6E46005F6295 /* QBAssetsViewController.m in Sources */,
+				E1560AD2240D651A001D53F7 /* PushNoAnimationSegue.m in Sources */,
 				AAF1CA1B1ACE5467005F6295 /* QBAlbumCell.m in Sources */,
 				AAA8FE221ACDA090002A9710 /* QBImagePickerController.m in Sources */,
 				AA3AD0741ACFA06700BF523E /* QBVideoIndicatorView.m in Sources */,
