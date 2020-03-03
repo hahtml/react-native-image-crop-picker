@@ -46,7 +46,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
         NSInteger recentAddedIndex = 0;
         NSUInteger index = 0;
         for (PHAssetCollection *assetCollection in assetCollections) {
-            if (assetCollection.assetCollectionType == PHAssetCollectionSubtypeSmartAlbumRecentlyAdded) {
+            if (assetCollection.assetCollectionType == PHAssetCollectionTypeSmartAlbum && assetCollection.assetCollectionSubtype == PHAssetCollectionSubtypeSmartAlbumRecentlyAdded) {
                 recentAddedIndex = index;
                 break;
             }
