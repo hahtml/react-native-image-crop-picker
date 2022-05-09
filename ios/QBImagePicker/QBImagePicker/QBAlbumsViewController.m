@@ -9,6 +9,7 @@
 #import "QBAlbumsViewController.h"
 #import <Photos/Photos.h>
 #import <PhotosUI/PhotosUI.h>
+#import "UIViewController+EnableAnimation.h"
 
 // Views
 #import "QBAlbumCell.h"
@@ -53,6 +54,26 @@ static bool isDarkMode() {
 @end
 
 @implementation QBAlbumsViewController
+
+- (void)setAssetCollections:(NSArray *)assetCollections {
+    if (_assetCollections != nil) {
+        _assetCollections = assetCollections;
+    } else {
+        _assetCollections = assetCollections;
+        NSInteger recentAddedIndex = 0;
+        NSUInteger index = 0;
+        for (PHAssetCollection *assetCollection in assetCollections) {
+            if (assetCollection.assetCollectionType == PHAssetCollectionTypeSmartAlbum && assetCollection.assetCollectionSubtype == PHAssetCollectionSubtypeSmartAlbumUserLibrary) {
+                recentAddedIndex = index;
+                break;
+            }
+            index++;
+        }
+        [self setEnableAnimation:NO];
+        [self performSegueWithIdentifier:@"ShowAssets" sender:[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:recentAddedIndex inSection:0]]];
+        [self setEnableAnimation:YES];
+    }
+}
 
 - (void)viewDidLoad
 {
@@ -204,7 +225,7 @@ static bool isDarkMode() {
         [assetCollections addObject:assetCollection];
     }];
     
-    self.assetCollections = assetCollections;
+    [self setAssetCollections:assetCollections];
 }
 
 - (UIImage *)placeholderImageWithSize:(CGSize)size
